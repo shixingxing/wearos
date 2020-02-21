@@ -2,6 +2,8 @@ package com.example.wearos
 
 import android.os.Bundle
 import android.support.wearable.activity.WearableActivity
+import com.google.android.gms.wearable.DataClient
+import com.google.android.gms.wearable.Wearable
 
 class MainActivity : WearableActivity() {
 
@@ -11,5 +13,7 @@ class MainActivity : WearableActivity() {
 
         // Enables Always-on
         setAmbientEnabled()
+
+        val dataClient: DataClient = Wearable.getDataClient(this)
     }
 }
